@@ -23,7 +23,7 @@ li a {
   text-decoration: none; /* Remove Underline*/
 }
 li a:link {
-  color: darkolivegreen; /*Before Click*/
+  color: peru; /*Before Click*/
 }
 li a:visited {
   color: darkkhaki; /* After Click*/
@@ -132,10 +132,10 @@ label {
   margin: 5px 0 0 0;
 }
 input {
-  width: 350px;
+  width: 80px;
 }
 input [type="radio"] {
-  width: 100px;
+  width: 25px;
 }
 textarea {
   width: 300px;
@@ -143,5 +143,5 @@ textarea {
 input [type="submit"] {
   display: block;
   margin: 20px 0 10px 0;
-  width: 300px;
+  width: 100px;
 }
