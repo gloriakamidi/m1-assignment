@@ -46,6 +46,17 @@ main h1 {
   font-family: Arial;
   text-align: center;
 }
+main #album .photo img {
+  display: block;
+}
+* {
+  box-sizing: border-box;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 15px;
+}
 /* Footer */
 footer {
   width: 100%;
