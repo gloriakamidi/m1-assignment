@@ -45,17 +45,50 @@ main h1 {
   color: darkgoldenrod;
   font-family: Arial;
   text-align: center;
-}
+} 
+/* Image */
 main #album .photo img {
   display: block;
+} 
+.photo {
+  position: relative;
+  overflow: hidden;
+
 }
+.photo  > .description {
+  position: absolute;
+  font-size: 2rem;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.photo:hover > .description {
+  opacity: 0;
+
+}
+/*
+.photo .description:hover + .caption { 
+  display: block;
+  background-color: beige;
+  color: #000;
+
+} */
 * {
   box-sizing: border-box;
 }
-.column {
+.colum {
   float: left;
-  width: 50%;
-  padding: 15px;
+  width: 10%;
+  padding: 5px;
+}
+/* Clearfix ( clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
 /* Footer */
 footer {
@@ -84,7 +117,7 @@ footer #disclaimer p {
 footer #nondisclaimer .social .fa {
   padding: 15px;
   font-size: 15px;
-  width: 15px;
+  width: 45px;
   text-align: center;
   text-decoration: none;
   margin: 0 4px;

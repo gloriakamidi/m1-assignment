@@ -42,18 +42,187 @@
     <!-- End Main Navigation-->
     <!-- Main Content-->
     <main>
-      <h2> Some Pictures to Fall in Love With</h2>
+      <h2>Some Pictures to Fall in Love With</h2>
       <ul id="album">
-        <li class="photo"><img src="images/pet1.jpg" alt="Devon Rex Cat"/></li>
-        <li class="photo"><img src="images/pet2.jpg" alt="French Bulldog" /></li>
-        <li class="photo"><img src="images/pet3.jpg" alt="Golden Retriever" /></li>
-        <li class="photo"><img src="images/pet4.jpg" alt="Max Cat" /></li>
-        <li class="photo"><img src="images/pet5.jpg" alt="Pug"/></li>
-        <li class="photo"><img src="images/pet6.jpg" alt="Scottish Fold Cat"/></li>
-        <li class="photo"><img src="images/pet7.jpg" alt="Sleeping Cat"/></li>
-        <li class="photo"><img src="images/pet8.jpg" alt="Charismatic Cat"/></li>
-        <li class="photo"><img src="images/pet9.jpg" alt="Playful Golden Retriever" /></li>
-        <li class="photo"><img src="images/pet10.jpg" alt="Focused French Bulldog" /></li>
+        <!--<li class="photo">
+          <img src="images/pet1.jpg" alt="Devon Rex Cat"/>
+          <div class="caption">
+        Devon Rex Cat
+           <div class="description">
+          A curiours cat
+          </div>
+          </div>
+          
+         </li>
+        <li class="photo">
+          <img src="images/pet2.jpg" alt="French Bulldog" />
+          <div class="caption">
+        French Bulldog
+           <div class="description">
+          A serene dog
+          </div>
+        </div>
+         
+        </li>
+        <li class="photo">
+          <img src="images/pet3.jpg" alt="Golden Retriever" />
+           <div class="caption">
+        Golden Retriever
+           <div class="description">
+          A blinking dog
+        </div>
+        </div>
+        
+        </li>
+        <li class="photo">
+          <img src="images/pet4.jpg" alt="Manx Cat" />
+          <div class="caption">
+          Manx Cat
+          <div class="description">
+          A cat ready to play
+         </div>
+        </div>
+          
+        </li>
+        <li class="photo">
+          <img src="images/pet5.jpg" alt="Pug"/>
+           <div class="caption">
+           Pug  
+        <div class="description">
+          A tired dog
+        </div>
+        </div>
+         
+        </li>
+        <li class="photo">
+          <img src="images/pet6.jpg" alt="Scottish Fold Cat"/>
+          <div class="caption">
+         Scottish Fold Cat 
+        </div>
+        <div class="description">
+          A cat licking its paw
+        </div>
+        </li>
+        <li class="photo">
+          <img src="images/pet7.jpg" alt="Sleeping Cat"/>
+          <div class="caption">
+         Sleeping Cat 
+          <div class="description">
+          A sleeping cat
+         </div>
+        </div>
+       
+        </li>
+        <li class="photo">
+          <img src="images/pet8.jpg" alt="Charismatic Cat"/>
+          <div class="caption">
+         Charismatic Cat 
+          <div class="description">
+          This cat is totally judging you
+          </div>
+        </div>
+         
+        </li>
+        <li class="photo">
+          <img src="images/pet9.jpg" alt="Playful Golden Retriever" />
+          <div class="caption">
+          Playful Golden Retriever
+          <div class="description">
+          This dog smile is truly contagious
+         </div>
+        </div>
+        </li>
+        <li class="photo">
+          <img src="images/pet10.jpg" alt="Focused French Bulldog" />
+          <div class="caption">
+          Focused French Bulldog
+          <div class="description">
+          This dog is unbothered
+         </div>
+        </div>
+        
+        </li>-->
+         <!--<div class="caption">
+        Devon Rex Cat
+          <div class ="description">
+          A curiours cat
+          </div>
+         </div>
+          
+         <div class="caption">
+        French Bulldog
+          <div class="description">
+          A serene dog
+          </div>
+        </div>
+         
+        <div class="caption">
+        Golden Retriever
+          <div class="description">
+          A blinking dog
+          </div>
+        </div>
+        
+         <div class="caption">
+          Manx Cat
+           <div class="description">
+          A cat ready to play
+           </div>
+        </div>
+          
+         <div class="caption">
+        Pug 
+          <div class="description">
+          A tired dog
+         </div> 
+        </div>
+         
+         <div class="caption">
+         Scottish Fold Cat 
+           <div class="description">
+          A cat licking its paw
+          </div>
+        </div>
+       
+        <div class="caption">
+         Sleeping Cat
+          <div class="description">
+          A sleeping cat
+          </div> 
+        </div>
+        
+         <div class="caption">
+         Charismatic Cat 
+         <div class="description">
+          This cat is totally judging you
+         </div>
+        </div>
+         
+        <div class="caption">
+          Playful Golden Retriever
+          <div class="description">
+          This dog smile is truly contagious
+         </div>
+        </div>
+        
+        <div class="caption">
+          Focused French Bulldog
+          <div class="description">
+          This dog is unbothered
+          </div>
+        </div>-->
+        
+
+
+        
+       
+        
+      
+       
+       
+       
+        
+        
       </ul>
     </main>
     <!--End Main Content-->
@@ -75,5 +244,47 @@
         </p>
       </div>
     </footer>
+    <script>
+       var photos = []; // empty array to store image element
+       var fileNames = []; // empty array to store image file names
+       var imageList = []; // empty array to store html list that contains an image
+       var image; // empty variable to store the assembled image list tag
+       var openList = "<li class='photo'>"; // variable to contain open list tag
+       var closeList = "</li>"; // to contain close  list tag
+
+       // Create a loop to create 6 images starting with index of 0
+       for (var i=0; i<10; i++) {
+         fileNames.push("pet"+ (i+1)); // Create mage file name and store in the array
+         photos.push("<img src='images/"+fileNames[i]+".jpg'>") // Assembel file  name into image element  and store it an array
+         image = openList + photos[i] + closeList; // Assemble  image element from array with list elements and store in a variable
+         imageList.push(image); // Store(push) the assembled list codes into an array
+       }
+       // Display all six images codes stored in the array
+       document.getElementById("album").innerHTML = imageList;
+
+
+      /*
+       // Caption text below each image
+      var openListTag = "<li class= 'photo'>"
+      var closeListTag = "</li>"
+      var openCaptionTag = "<div class='caption'>"
+      var  closeCaptionTag = "</div>"
+
+      // Creating arrays that contain a collection of text
+      string[] listTexts = {
+         "pet1", "pet2", "pet3", "pet4", "pet5", "pet6", "pet7", "pet8", "pet9", "pet10"
+
+      };
+      //system.out.println()
+      string[] captionTexts = {
+            "Devon Rex Cat", "French Bulldog", "Golden Retriever", "Manx Cat", "Pug", "Scottish Fold Cat", "Sleeping Cat", "Charismatic Cat", "Playful Golden Retriever", "Focused French Bulldog"
+      };
+      system.out.println(captionTexts[0,1,2,3,4,5,6,7,8,9]); */
+
+
+
+
+       //Description on mouseover
+    </script>
   </body>
 </html>
