@@ -55,7 +55,7 @@ main #album .photo img {
   overflow: hidden;
 
 }
-.photo  > .description {
+.photo  .description {
   position: absolute;
   font-size: 2rem;
   padding: 1rem;
@@ -65,7 +65,7 @@ main #album .photo img {
   align-items: center;
 }
 
-.photo:hover > .description {
+.photo:hover .description {
   opacity: 0;
 
 }
