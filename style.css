@@ -68,7 +68,8 @@ main #album .photo img {
 .photo:hover .description {
   opacity: 0;
 
-}
+} 
+
 /*
 .photo .description:hover + .caption { 
   display: block;
