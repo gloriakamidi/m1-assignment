@@ -2,21 +2,31 @@
 /* var textInformation = []; // Empty array to store text information
 var openTextInfo = "<p class='textinfo'>";
 var closeTextInfo = "</p>";
-var textInfo = [Furry Friends];*/
+var textInfo = [Furry Friends];
 var openTitle = "<div id='title'>";
 var closeTitle = "</div>";
-var infoBox;
-var title = ["Furry Friends"];
-var textInfo = ["Click This To Close"];
+var openTextInfo = "<div class='textinfo'>";
+var closeTextInfo = "</div>";*/
+//var box;
+//var infoBox;
+//var title = ["Furry Friends"];
+var textInfo = ["Friends for Life"];
+linkText = ["Click This To Close"];
 var txtLink = document.getElementById("textLink");
-//txtLink.addEventListener("onclick");
+txtLink.addEventListener("click", closeInfoBox);
+
 
 //To Display Infobox
-document.getElementsByClassName("description").addEventListener("onclick") = displayInfoBox;
-
+//document.getElementsByClassName("description").addEventListener("click", displayInfoBox);
+document.querySelector("h2.description").addEventListener("click", displayInfoBox);
+/*function infoBox {
+    box = openTitle + title + closeTitle + openTextInfo + textInfo + closeTextInfo + 
+} */
 function displayInfoBox() {
     document.getElementById("infobox").style.visibility = "visible";
     document.getElementById("title").innerHTML = captionText["pet1", "pet2", "pet3", "pet4", "pet5", "pet6", "pet7", "pet8", "pet9", "pet10"];
+    document.getElementsByClassName("textinfo").innerHTML = textInfo["Friends for Life"];
+    document.getElementById("textLink").innerHTML = linkText ["Click This To Close"];
 }
 
 //To Close InfoBox

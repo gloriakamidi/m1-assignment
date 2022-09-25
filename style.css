@@ -82,7 +82,7 @@ main #album .photo img {
   display: flex;
   
   
-  /*text-align: center;*/
+  text-align: center;
   visibility: hidden;
   background: rgba(243, 240, 240, 0.8);
 
@@ -104,6 +104,8 @@ main #album .photo img {
   visibility: visible;
 
 }
+
+
 /*To center the description
 #album li.photo .description {
   width: 300px;
