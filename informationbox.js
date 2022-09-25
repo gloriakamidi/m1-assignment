@@ -6,7 +6,7 @@ var textInfo = [Furry Friends];*/
 var openTitle = "<div id='title'>";
 var closeTitle = "</div>";
 var infoBox;
-var title = [Furry Friends];
+var title = ["Furry Friends"];
 var textInfo = ["Click This To Close"];
 var txtLink = document.getElementById("textLink");
 //txtLink.addEventListener("onclick");
