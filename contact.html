@@ -104,15 +104,15 @@
 
         if (checkEmail.checked){
           email.style.display = "block";
-        } else {
+          phone.style.display = "none";
+        } else if (checkPhone.checked){
+          phone.style.display = "block";
           email.style.display = "none";
+        } else {
+          email.style.display = "none"
+          phone.style.display = "none";
         }
 
-         if (checkPhone.checked){
-          phone.style.display = "box";
-        } else {
-          phone.style.display ="none";
-        }
       }
     </script>
   </body>
