@@ -52,23 +52,26 @@
           <legend>Contact Form</legend>
           <label>Enter your full name</label>
           <input type="text" name="name" />
-          <label>Enter your email</label>
+          <!--<label>Enter your email</label>
           <input type="email" name="email" />
           <label>Enter your phone</label>
-          <input type="phone" name="phone" />
-          <label>How should we contact you?</label>
+          <input type="phone" name="phone" />-->
+          <label id="select">How should we contact you?</label>
           <!-- Added this Part to create User Interface Element-->
+          <!--To check only one radio button at a time give them both the same "name"-->
           <label for="Email"> 
-          <input type="radio" id="Email" name="Email" value="Email" onclick="ShowHideDiv()" />Email
+          <input type="radio" id="Email" name="test" value="Email" onclick="ShowHideDiv()" />Email 
           </label>
           <label for="Phone"> 
-          <input type="radio"  id="Phone" name="Phone" value="Phone" onclick="ShowHideDiv()" />Phone
+          <input type="radio"  id="Phone" name="test" value="Phone" onclick="ShowHideDiv()" />Phone
           </label>
           <div id="contactEmail" style="display: none">
               <label>Enter your email</label>
+              <input type="email" name="email" />
             </div>
             <div id="contactPhone" style="display: none">
             <label>Enter your phone</label>
+            <input type="phone" name="phone" />
             </div> 
             <!-- For user interface element-->
           <label>What can we help you with?</label>
@@ -96,6 +99,8 @@
       </div>
     </footer>
     <script>
+      var contactOption = document.getElementById("select");
+      contactOption.addEventListener("change", ShowHideDiv);
       function ShowHideDiv() {
         var checkEmail = document.getElementById("Email");
         var email = document.getElementById("contactEmail");
