@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <title>My Second webpage</title>
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="box.css" />
+    <!--<link rel="stylesheet"/>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    
   </head>
   <body>
     <!-- Container to wrap everything-->
@@ -53,6 +53,12 @@
       <h2>Some Pictures to Fall in Love With</h2>
       <ul id="album">
       </ul>
+        <!--<div class="lightbox-toggle"></div>-->
+
+      <div class="backdrop"></div>
+        <div class="box">
+          <div class="close">x</div>
+        </div>
     </main>
     <!--End Main Content-->
 
@@ -87,6 +93,9 @@
        var captionText = ["pet1", "pet2", "pet3", "pet4", "pet5", "pet6", "pet7", "pet8", "pet9", "pet10"];
        var descriptionText = ["Devon Rex Cat", "French Bulldog", "Golden Retriever", "Manx Cat", "Pug", "Scottish Fold Cat", "Sleeping Cat", "Charismatic Cat", "Playful Golden Retriever", "Focused French Bulldog"];
        // Create a loop to create 6 images starting with index of 0
+
+       // Create new variables for Lightbox
+       
        for (var i=0; i<10; i++) {
          fileNames.push("pet"+ (i+1)); // Create image file name and store in the array
          photos.push("<img src='images/"+fileNames[i]+".jpg'>") // Assembel file  name into image element  and store it an array
@@ -101,9 +110,11 @@
        image = <li class= "photo"> + ["pet1", "pet2"...] + <p class= "caption"> + captionText[i] + </p> + <h2 class= "description"> + descriptionText[i]+ </h2> + </li>;
 
         */
+      
     
     </script>
     <!--Infobox-->
-    <script src="informationbox.js"></script>
+    <script src="js/informationbox.js"></script>
+    <script src="js/lightbox.js"></script>
   </body>
 </html>
